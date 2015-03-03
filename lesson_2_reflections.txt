@@ -25,6 +25,15 @@ Branches would be useful when you want to preserve a working version of the sour
 while working out coding a new feature.  Branches help by keeping the source code changes
 associated with the feature separate from the main branch.
 
+How do the diagrams help you visualize the branch structure?
+The diagrams show chronological order.  This order reflects the parent/child
+relationship between commits.  It also shows how branches are separated from 
+the master.  In my case, the easy-mode branch did not appear distinct from the
+master.  Perhaps this is because no further changes were made to the master after 
+adding easy-mode or maybe because the easy-mode branch only contained one commit.
+
+
+
 
 
 
