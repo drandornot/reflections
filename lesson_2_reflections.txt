@@ -5,6 +5,12 @@ git init produces an empty repository.  It adds a hidden subdirectory
 called .git to the working directory.  If you don't do this, there will
 be no place for your commits to be recorded.
 
+How is the staging area different from the working directory and the repository? 
+What value do you think it offers?
+The staging area is a list of files that become part of the commit.  
+The staging area allows files to be associated with each other so they are
+all updated simultaneously during a git commit.  The staging area provides
+a means for multiple files to be updated together.
 
 
 
