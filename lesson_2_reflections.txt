@@ -1,0 +1,11 @@
+Reflections from lesson 2.
+
+What happens when you initialize a repository? Why do you need to do it?
+git init produces an empty repository.  It adds a hidden subdirectory 
+called .git to the working directory.  If you don't do this, there will
+be no place for your commits to be recorded.
+
+
+
+
+

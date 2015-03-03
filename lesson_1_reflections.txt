@@ -1,0 +1,49 @@
+Reflections from lesson 1.
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+It helped eliminate the majority of lines that were not different.
+This allowed me to focus on the lines that were different and
+easily identify the variable that was spelled incorrectly.
+
+How could having easy access to the entire history of a file make you a more efficient programmer?
+It can help me revert to the most recent working version 
+so I can make incremental changes to discover the source of a bug.
+It can also help me see the changes made by others and learn from them.
+
+Pros and cons of manually choosing to commit vs. having commits generated automatically.
+Most automatic commits do not necessarily occur at logical intervals or points in time.
+However, automatic commits would help mitigate any unexpected system problem (e.g. a crash).
+Manual commits can occur at logical points in development.  However, they depend on the
+judgement of the programmer.  A system that prompts the programmer to commit at regular
+intervals OR on each save of the file could be helpful.  All systems will depend on
+the programmer's willingness to properly document each commit.  This feature is missing
+in a system like Google docs.
+
+Why do some VCS like Git allow saving multiple files in one commit and others
+like Google docs treat files separately?
+This has to do with context and possible dependencies.  Google docs do not necessarily
+have dependencies.  Each document stands on its own.  The context of source code, however,
+is quite different.  Most source code depends on information located in other files. 
+In the case of programming, it makes sense to commit files as a group instead of individually.
+It emphasizes that the files work together and may be likely to be changed together.
+
+How can you use "git log" and "git diff" to view the history of files?
+"git log" will provide a list of file versions starting with the most recent version.  
+Each file version has a unique commit code assigned to it.  You use the commit code to 
+reference the files.  To see how a file has changed between versions, you type the
+command: git diff, followed by the two commit codes you wish to compare.  The mistake I
+made when first doing this was to take the commit codes in the wrong order.
+
+How might VCS make you more confident to make changes that could break something?
+Being able to revert all of my files back to a previous point in time to find a bug can add 
+to my confidence.  However, there is really no substitute for exhaustive testing
+to assure that bugs are caught before they propagate to later versions.
+
+What do you want to try using git for?
+I can see where git could be useful for many different types of important documents. 
+I still don't know how to set up git to track a particular set of files.  
+I'm hoping that will be covered next.  The next course I will move on to is javascript.
+I think it will be helpful in that course.
+
+
+
+
