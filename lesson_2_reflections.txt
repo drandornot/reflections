@@ -48,6 +48,25 @@ versions belong to each branch.  When the branches are merged, "git log" will sh
 the file IDs in chronological order.  In that case, the parent for each version
 is not apparent.  The diagram preserves lineage.
 
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+"git merge" works automatically if the changes in the branches to be merged are
+independent (i.e. do not involve simultaneous and inconsistent changes to the same
+line or function).  When changes to a line or function are inconsistent between branches, 
+git asks that you resolve the conflict manually.  Branching provides a way to have two 
+aspects of a document worked on independently.  Merging allows the changes to come
+together.  In my opinion, having merges happen manually and continuously between branches 
+could take a lot of time resolving conflicts.  The upside, however, would be that the
+developer of each branch would always be working with the most recent version of the
+complete project.  This assumes, however, that all updated versions involved in the
+merge be relatively free from major bugs.  If not, development could be severly
+hampered.  This lesson was relatively straightforward although many of the questions
+were tricky and I did not always feel confident that I knew what was being asked for.
+When the git log after the merge was asked for, I had deleted the conflict message.  
+I had to figure out how to revert to before the merge and do it over again.  
+The command I used to revert was "git reset --merge ORIG_HEAD" ... thank goodness
+it worked.
+
+
 
 
 
