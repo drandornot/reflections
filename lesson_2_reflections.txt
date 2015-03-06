@@ -1,7 +1,7 @@
 Reflections from lesson 2.
 
 What happens when you initialize a repository? Why do you need to do it?
-git init produces an empty repository.  It adds a hidden subdirectory 
+"git init" produces an empty repository.  It adds a hidden subdirectory 
 called .git to the working directory.  If you don't do this, there will
 be no place for your commits to be recorded.
 
@@ -10,20 +10,27 @@ What value do you think it offers?
 The staging area is a list of files that become part of the commit.  
 The staging area allows files to be associated with each other so they are
 all updated simultaneously during a git commit.  The staging area provides
-a means for multiple files to be updated together.
+a means for multiple files to be updated together.  "git add" places files in 
+the staging area.  "git commit" generates the commit.
 
 How can you use the staging area to make sure you have one commit per logical change?
 I'm not confident about how to answer this question.  I think that every time a
 logical change is made, the affected files should be added to the staging area.
 If you check status before making the commit, status will tell you what files 
 have been changed since the last commit.  All files that have been changed should
-be added to the staging area before committing them.
+be added to the staging area before committing them.  When a file has been committed
+git references the file version using a git ID code.  These codes can be used to compare
+any two versions using "git diff".  "git show" will generate a diff with the previous 
+version of the file.  Use git checkout with an ID to access any version.  You can see
+the git IDs using "git log".
 
 What are some situations when branches would be helpful in keeping your history organized? 
 How would branches help?
 Branches would be useful when you want to preserve a working version of the source code 
 while working out coding a new feature.  Branches help by keeping the source code changes
-associated with the feature separate from the main branch.
+associated with the feature separate from the main branch.  To create a branch, use 
+"git branch".  By creating a branch, you have created a git tree.  You can visualize
+the tree using "git log --graph --oneline branch1 branch2 etc".
 
 How do the diagrams help you visualize the branch structure?
 The diagrams show chronological order.  This order reflects the parent/child
@@ -31,6 +38,17 @@ relationship between commits.  It also shows how branches are separated from
 the master.  In my case, the easy-mode branch did not appear distinct from the
 master.  Perhaps this is because no further changes were made to the master after 
 adding easy-mode or maybe because the easy-mode branch only contained one commit.
+To view the branches graphically.
+
+What is the result of merging two branches together? 
+Why do we represent it in the diagram the way we do?
+When branches are merged by "git merge br1 br2" git tries to create a single file
+containing the changes in both branches.  The diagram clearly shows which file
+versions belong to each branch.  When the branches are merged, "git log" will show
+the file IDs in chronological order.  In that case, the parent for each version
+is not apparent.  The diagram preserves lineage.
+
+
 
 
 
