@@ -1,0 +1,6 @@
+When would you want to use a remote repository rather than keeping all your work local?
+A remote repository is useful if I am using different machines to develop code
+or if I am working with a team.  The downside is that I must be connected to 
+the internet to use the remote repository.  The upside is that I can work with
+off-site collaborators and I don't need to worry about the machine holding my
+repository crashing.  One possible concern is security.
