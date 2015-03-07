@@ -4,3 +4,10 @@ or if I am working with a team.  The downside is that I must be connected to
 the internet to use the remote repository.  The upside is that I can work with
 off-site collaborators and I don't need to worry about the machine holding my
 repository crashing.  One possible concern is security.
+
+Why might you want to always pull changes manually rather than having 
+Git automatically stay up-to-date with your remote repository?
+If others are making changes to the code remotely, changes can happen
+at any time.  Automatic pulls will could result in changes occurring
+while a file is being edited and mandate a merge when it was time to
+save the local file.
