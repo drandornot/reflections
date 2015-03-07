@@ -1,13 +1,26 @@
 When would you want to use a remote repository rather than keeping all your work local?
-A remote repository is useful if I am using different machines to develop code
-or if I am working with a team.  The downside is that I must be connected to 
-the internet to use the remote repository.  The upside is that I can work with
-off-site collaborators and I don't need to worry about the machine holding my
-repository crashing.  One possible concern is security.
+	A remote repository is useful if I am using different machines to develop code
+	or if I am working with a team.  The downside is that I must be connected to 
+	the internet to use the remote repository.  The upside is that I can work with
+	off-site collaborators and I don't need to worry about the machine holding my
+	repository crashing.  One possible concern is security.
 
 Why might you want to always pull changes manually rather than having 
 Git automatically stay up-to-date with your remote repository?
-If others are making changes to the code remotely, changes can happen
-at any time.  Automatic pulls will could result in changes occurring
-while a file is being edited and mandate a merge when it was time to
-save the local file.
+	If others are making changes to the code remotely, changes can happen
+	at any time.  Automatic pulls will could result in changes occurring
+	while a file is being edited and mandate a merge when it was time to
+	save the local file.
+
+Describe the differences between forks, clones, and branches. When 
+would you use one instead of another?
+	I can clone any repository (if I have permission) and use it on
+	my local machine.  I can create branches on the cloned repository
+	to modify files without affecting those in the the master branch.
+	If I have permission, I can push my branch (and changes to the master)
+	to the remote repository.  If I clone a remote repository and use it
+	locally I may not be able to push my changes back to the remote
+	because I do not have permission.  A fork allows me to make a remote
+	copy of a repository that I can push to from my local machine or
+	edit on the remote server.
+	
