@@ -24,3 +24,7 @@ would you use one instead of another?
 	copy of a repository that I can push to from my local machine or
 	edit on the remote server.
 	
+What is the benefit of having a copy of the last known state of the 
+remote stored locally?
+	It allows git to determine if a merge is required when you commit
+	a new version of a file locally.
